@@ -161,7 +161,7 @@ pnpm wrangler pages deploy dist --project-name postcraft-work
 
 1. 启动本地预览。
 2. 截图首页和相关页面。
-3. 使用 `zai-mcp-server` 的图片识别能力进行视觉审核。
+3. 使用 `zai-mcp-server` 的图片识别能力进行视觉审核；如果有多张截图，应一次并行提交多张图片进行分析，不要逐张串行审核。
 4. 根据审核结果修正 UI。
 5. 必要时再次截图复审。
 6. 再执行 build。
