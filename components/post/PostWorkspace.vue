@@ -28,9 +28,11 @@
         <span class="rounded-full bg-white px-3 py-1 text-xs font-semibold text-professional shadow-subtle">Editor active</span>
       </div>
 
+      <PostStats :stats="stats" class="mt-5" />
+
       <div class="mt-5 min-w-0 rounded-xl border border-soft bg-white p-4">
         <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">Current draft</p>
-        <p class="mt-4 text-3xl font-bold text-ink">{{ postText.length }}</p>
+        <p class="mt-4 text-3xl font-bold text-ink">{{ stats.characters }}</p>
         <p class="mt-1 text-sm text-muted">Characters in editor</p>
         <div class="mt-6 max-h-[360px] overflow-hidden rounded-lg bg-[#FBFCFE] p-4 text-sm leading-6 text-slate-700">
           <template v-if="draftParagraphs.length">
@@ -70,6 +72,7 @@ Preview the first screen before you copy.
 What would you improve before posting?`
 
 const postText = ref(props.initialText || examplePost)
+const stats = usePostStats(postText)
 
 const draftParagraphs = computed(() =>
   postText.value
