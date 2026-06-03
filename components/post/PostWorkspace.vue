@@ -16,7 +16,14 @@
         <span class="rounded-full border border-white/15 bg-white px-4 py-2 shadow-subtle">Copy-ready formatting</span>
       </div>
 
-      <PostEditor v-model="postText" class="mt-8" @use-example="useExample" @clear="clearPost" />
+      <FormatToolbar
+        class="mt-8"
+        :text="postText"
+        @format="applyFormat"
+        @clean-spacing="applyCleanSpacing"
+        @clear="clearPost"
+      />
+      <PostEditor v-model="postText" class="mt-3" @use-example="useExample" @clear="clearPost" />
     </div>
 
     <aside class="min-w-0 rounded-2xl border border-white/70 bg-[#FFFDF8] p-5 shadow-soft" aria-label="Workspace preview and stats">
@@ -58,6 +65,7 @@ What would you improve before posting?`
 
 const postText = ref(props.initialText || examplePost)
 const stats = usePostStats(postText)
+const { cleanPostSpacing, formatPost } = usePostFormatter()
 
 function useExample() {
   postText.value = examplePost
@@ -65,5 +73,13 @@ function useExample() {
 
 function clearPost() {
   postText.value = ''
+}
+
+function applyFormat() {
+  postText.value = formatPost(postText.value)
+}
+
+function applyCleanSpacing() {
+  postText.value = cleanPostSpacing(postText.value)
 }
 </script>
