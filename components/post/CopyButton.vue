@@ -5,14 +5,19 @@
     :disabled="!text"
     @click="copy"
   >
-    <span aria-live="polite">{{ copied ? 'Copied' : 'Copy post' }}</span>
+    <span aria-live="polite">{{ copied ? copiedLabel : label }}</span>
   </button>
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
+const props = withDefaults(defineProps<{
   text: string
-}>()
+  label?: string
+  copiedLabel?: string
+}>(), {
+  label: 'Copy post',
+  copiedLabel: 'Copied'
+})
 
 const copied = ref(false)
 let resetTimer: ReturnType<typeof setTimeout> | undefined
