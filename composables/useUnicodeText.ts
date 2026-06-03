@@ -1,9 +1,23 @@
-import { toBold, toBoldItalic, toItalic } from '~/utils/unicodeText'
+import {
+  convertUnicodeText,
+  restorePlainText,
+  toBold,
+  toBoldItalic,
+  toItalic,
+  toMonospace,
+  toSansBold,
+  toSansItalic
+} from '~/utils/unicodeText'
 
 export function useUnicodeText() {
   return {
+    convertUnicodeText,
+    restorePlainText,
     toBold,
     toItalic,
-    toBoldItalic
+    toBoldItalic,
+    toSansBold,
+    toSansItalic,
+    toMonospace
   }
 }
