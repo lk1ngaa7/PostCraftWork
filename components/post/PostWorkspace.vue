@@ -38,6 +38,7 @@
 
       <PostPreview :text="postText" :stats="stats" class="mt-5" />
       <PostStats :stats="stats" class="mt-5" />
+      <PostInspector :result="inspection" class="mt-5" />
     </aside>
   </section>
 </template>
@@ -66,6 +67,7 @@ What would you improve before posting?`
 
 const postText = ref(props.initialText || examplePost)
 const stats = usePostStats(postText)
+const inspection = usePostInspector(postText)
 const { cleanPostSpacing, formatPost } = usePostFormatter()
 
 function useExample() {
