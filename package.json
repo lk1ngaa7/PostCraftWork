@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate && rm -rf dist && cp -R .output/public dist",
     "preview": "nuxt preview",
     "deploy": "pnpm generate && pnpm wrangler pages deploy dist --project-name postcraft-work"
   },
