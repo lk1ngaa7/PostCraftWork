@@ -24,6 +24,7 @@
         @clear="clearPost"
       />
       <PostEditor v-model="postText" class="mt-3" @use-example="useExample" @clear="clearPost" />
+      <UnicodeTextConverter class="mt-3" />
     </div>
 
     <aside class="min-w-0 rounded-2xl border border-white/70 bg-[#FFFDF8] p-5 shadow-soft" aria-label="Workspace preview and stats">
