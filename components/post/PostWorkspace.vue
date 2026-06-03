@@ -19,32 +19,17 @@
       <PostEditor v-model="postText" class="mt-8" @use-example="useExample" @clear="clearPost" />
     </div>
 
-    <aside class="min-w-0 rounded-2xl border border-white/70 bg-[#FFFDF8] p-5 shadow-soft" aria-label="Workspace draft mirror">
+    <aside class="min-w-0 rounded-2xl border border-white/70 bg-[#FFFDF8] p-5 shadow-soft" aria-label="Workspace preview and stats">
       <div class="flex flex-wrap items-center justify-between gap-3 border-b border-soft pb-4">
         <div class="min-w-0">
-          <p class="text-sm font-semibold text-ink">Draft mirror</p>
-          <p class="mt-1 text-sm text-muted">A clean read-through of the text currently in the editor.</p>
+          <p class="text-sm font-semibold text-ink">Preview workspace</p>
+          <p class="mt-1 text-sm text-muted">Preview the post structure before publishing.</p>
         </div>
-        <span class="rounded-full bg-white px-3 py-1 text-xs font-semibold text-professional shadow-subtle">Editor active</span>
+        <span class="rounded-full bg-white px-3 py-1 text-xs font-semibold text-professional shadow-subtle">Live</span>
       </div>
 
+      <PostPreview :text="postText" :stats="stats" class="mt-5" />
       <PostStats :stats="stats" class="mt-5" />
-
-      <div class="mt-5 min-w-0 rounded-xl border border-soft bg-white p-4">
-        <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">Current draft</p>
-        <p class="mt-4 text-3xl font-bold text-ink">{{ stats.characters }}</p>
-        <p class="mt-1 text-sm text-muted">Characters in editor</p>
-        <div class="mt-6 max-h-[360px] overflow-hidden rounded-lg bg-[#FBFCFE] p-4 text-sm leading-6 text-slate-700">
-          <template v-if="draftParagraphs.length">
-            <p v-for="paragraph in draftParagraphs" :key="paragraph" class="mb-4 last:mb-0">
-              {{ paragraph }}
-            </p>
-          </template>
-          <p v-else class="text-muted">
-            Your draft mirror will appear here as soon as you type.
-          </p>
-        </div>
-      </div>
     </aside>
   </section>
 </template>
@@ -73,13 +58,6 @@ What would you improve before posting?`
 
 const postText = ref(props.initialText || examplePost)
 const stats = usePostStats(postText)
-
-const draftParagraphs = computed(() =>
-  postText.value
-    .split(/\n{2,}/)
-    .map((paragraph) => paragraph.trim())
-    .filter(Boolean)
-)
 
 function useExample() {
   postText.value = examplePost
