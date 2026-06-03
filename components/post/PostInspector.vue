@@ -21,8 +21,12 @@
         <div class="flex items-start gap-2">
           <span class="mt-1 h-2 w-2 shrink-0 rounded-full" :class="dotClasses[item.type]" />
           <div>
-            <p class="text-sm font-semibold text-ink">{{ item.title }}</p>
+            <div class="flex flex-wrap items-center gap-2">
+              <p class="text-sm font-semibold text-ink">{{ item.title }}</p>
+              <span class="rounded-full bg-white px-2 py-0.5 text-[11px] font-semibold uppercase text-slate-500">{{ item.category }}</span>
+            </div>
             <p class="mt-1 text-xs leading-5 text-muted">{{ item.message }}</p>
+            <p v-if="item.suggestion" class="mt-2 text-xs font-semibold leading-5 text-slate-700">{{ item.suggestion }}</p>
           </div>
         </div>
       </li>
