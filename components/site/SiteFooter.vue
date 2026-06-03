@@ -8,10 +8,10 @@
         </p>
       </div>
       <nav class="flex flex-wrap gap-x-4 gap-y-2" aria-label="Footer navigation">
-        <NuxtLink class="hover:text-ink" to="/#formatter">Formatter</NuxtLink>
-        <NuxtLink class="hover:text-ink" to="/#preview">Preview</NuxtLink>
-        <NuxtLink class="hover:text-ink" to="/#character-limit">Character Limit</NuxtLink>
-        <NuxtLink class="hover:text-ink" to="/#inspector">Inspector</NuxtLink>
+        <NuxtLink class="hover:text-ink" to="/linkedin-post-formatter">Formatter</NuxtLink>
+        <NuxtLink class="hover:text-ink" to="/linkedin-post-preview">Preview</NuxtLink>
+        <NuxtLink class="hover:text-ink" to="/linkedin-post-character-limit">Character Limit</NuxtLink>
+        <NuxtLink class="hover:text-ink" to="/linkedin-post-inspector">Inspector</NuxtLink>
       </nav>
     </div>
   </footer>

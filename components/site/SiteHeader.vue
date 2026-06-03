@@ -18,7 +18,7 @@
       </nav>
 
       <NuxtLink
-        to="/#formatter"
+        to="/linkedin-post-formatter"
         class="hidden rounded-lg bg-professional px-4 py-2 text-sm font-semibold text-white shadow-subtle transition hover:bg-action sm:inline-flex"
       >
         Open formatter
@@ -29,10 +29,10 @@
 
 <script setup lang="ts">
 const navItems = [
-  { label: 'Formatter', to: '/#formatter' },
-  { label: 'Preview', to: '/#preview' },
-  { label: 'Character Limit', to: '/#character-limit' },
-  { label: 'Bold Text', to: '/#bold-text' },
-  { label: 'Inspector', to: '/#inspector' }
+  { label: 'Formatter', to: '/linkedin-post-formatter' },
+  { label: 'Preview', to: '/linkedin-post-preview' },
+  { label: 'Character Limit', to: '/linkedin-post-character-limit' },
+  { label: 'Bold Text', to: '/how-to-bold-text-in-linkedin-post' },
+  { label: 'Inspector', to: '/linkedin-post-inspector' }
 ]
 </script>

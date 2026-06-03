@@ -5,10 +5,10 @@
         Browser-based LinkedIn writing tools
       </p>
       <h1 class="mt-5 max-w-[310px] text-3xl font-bold leading-tight text-white sm:max-w-3xl sm:text-5xl lg:text-6xl">
-        Free LinkedIn Post Tools
+        {{ title }}
       </h1>
       <p class="mt-6 max-w-[310px] text-base leading-7 text-slate-200 sm:max-w-2xl sm:text-lg sm:leading-8">
-        Format, preview, inspect, and polish your LinkedIn posts before publishing.
+        {{ subtitle }}
       </p>
       <div class="mt-8 flex max-w-[310px] flex-wrap gap-3 text-sm font-medium text-slate-700 sm:max-w-none">
         <span class="rounded-full border border-white/15 bg-white px-4 py-2 shadow-subtle">No sign-up required</span>
@@ -33,7 +33,7 @@
           <p class="text-sm font-semibold text-ink">Preview workspace</p>
           <p class="mt-1 text-sm text-muted">Preview the post structure before publishing.</p>
         </div>
-        <span class="rounded-full bg-white px-3 py-1 text-xs font-semibold text-professional shadow-subtle">Live</span>
+        <span class="rounded-full bg-white px-3 py-1 text-xs font-semibold text-professional shadow-subtle">{{ modeLabel }}</span>
       </div>
 
       <PostPreview :text="postText" :stats="stats" class="mt-5" />
@@ -50,10 +50,14 @@ const props = withDefaults(
   defineProps<{
     mode?: WorkspaceMode
     initialText?: string
+    title?: string
+    subtitle?: string
   }>(),
   {
     mode: 'format',
-    initialText: ''
+    initialText: '',
+    title: 'Free LinkedIn Post Tools',
+    subtitle: 'Format, preview, inspect, and polish your LinkedIn posts before publishing.'
   }
 )
 
@@ -69,6 +73,17 @@ const postText = ref(props.initialText || examplePost)
 const stats = usePostStats(postText)
 const inspection = usePostInspector(postText)
 const { cleanPostSpacing, formatPost } = usePostFormatter()
+
+const modeLabel = computed(() => {
+  const labels: Record<WorkspaceMode, string> = {
+    format: 'Format',
+    preview: 'Preview',
+    stats: 'Stats',
+    bold: 'Bold text',
+    inspector: 'Inspector'
+  }
+  return labels[props.mode]
+})
 
 function useExample() {
   postText.value = examplePost
