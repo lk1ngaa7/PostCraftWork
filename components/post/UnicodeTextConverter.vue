@@ -24,7 +24,7 @@
         v-for="option in options"
         :key="option.value"
         type="button"
-        class="rounded-lg border px-3 py-2 text-sm font-semibold transition"
+        class="min-h-11 rounded-lg border px-3 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-professional"
         :class="styleMode === option.value ? 'border-professional bg-professional text-white' : 'border-border bg-white text-slate-700 hover:border-professional hover:text-professional'"
         @click="styleMode = option.value"
       >

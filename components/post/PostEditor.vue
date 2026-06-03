@@ -11,14 +11,14 @@
       <div class="flex flex-wrap gap-2">
         <button
           type="button"
-          class="rounded-lg bg-professional px-3 py-2 text-sm font-semibold text-white shadow-subtle transition hover:bg-action"
+          class="min-h-11 rounded-lg bg-professional px-3 py-2 text-sm font-semibold text-white shadow-subtle transition hover:bg-action focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-professional"
           @click="$emit('useExample')"
         >
           Use example
         </button>
         <button
           type="button"
-          class="rounded-lg border border-border bg-white px-3 py-2 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:text-ink disabled:cursor-not-allowed disabled:opacity-45"
+          class="min-h-11 rounded-lg border border-border bg-white px-3 py-2 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-professional disabled:cursor-not-allowed disabled:opacity-45"
           :disabled="!model"
           @click="$emit('clear')"
         >

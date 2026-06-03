@@ -6,6 +6,7 @@
     "dev": "nuxt dev",
     "build": "nuxt build",
     "generate": "nuxt generate && rm -rf dist && cp -R .output/public dist",
+    "typecheck": "nuxi typecheck",
     "preview": "nuxt preview",
     "deploy": "pnpm generate && pnpm wrangler pages deploy dist --project-name postcraft-work"
   },
@@ -15,7 +16,9 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.14.0",
+    "tailwindcss": "^3.4.19",
     "typescript": "^6.0.3",
+    "vue-tsc": "^3.3.3",
     "wrangler": "^4.97.0"
   }
 }

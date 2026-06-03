@@ -11,7 +11,7 @@
           v-for="item in navItems"
           :key="item.to"
           :to="item.to"
-          class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-ink"
+          class="min-h-11 rounded-lg px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-professional"
         >
           {{ item.label }}
         </NuxtLink>
@@ -19,7 +19,7 @@
 
       <NuxtLink
         to="/linkedin-post-formatter"
-        class="hidden rounded-lg bg-professional px-4 py-2 text-sm font-semibold text-white shadow-subtle transition hover:bg-action sm:inline-flex"
+        class="hidden min-h-11 rounded-lg bg-professional px-4 py-2 text-sm font-semibold text-white shadow-subtle transition hover:bg-action focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-professional sm:inline-flex sm:items-center"
       >
         Open formatter
       </NuxtLink>
