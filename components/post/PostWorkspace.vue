@@ -1,7 +1,7 @@
 <template>
-  <section class="my-8 ml-5 mr-auto grid w-[350px] max-w-[calc(100vw-40px)] gap-8 overflow-hidden rounded-[28px] bg-navy px-5 py-10 shadow-soft sm:mx-auto sm:w-full sm:max-w-6xl sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:p-10">
+  <section class="my-8 ml-5 mr-auto grid w-[350px] max-w-[calc(100vw-40px)] gap-8 overflow-hidden rounded-[28px] bg-navy px-5 py-10 shadow-soft sm:mx-auto sm:w-full sm:max-w-6xl sm:px-8 lg:grid-cols-[1.18fr_0.82fr] lg:p-10">
     <div class="min-w-0">
-      <p class="max-w-full text-xs font-semibold uppercase tracking-[0.08em] text-[#7DD3FC] sm:text-sm sm:tracking-[0.18em]">
+      <p class="max-w-full text-xs font-semibold uppercase tracking-[0.08em] text-[#F8D49B] sm:text-sm sm:tracking-[0.18em]">
         Browser-based LinkedIn writing tools
       </p>
       <h1 class="mt-5 max-w-[310px] text-3xl font-bold leading-tight text-white sm:max-w-3xl sm:text-5xl lg:text-6xl">
@@ -11,9 +11,9 @@
         {{ subtitle }}
       </p>
       <div class="mt-8 flex max-w-[310px] flex-wrap gap-3 text-sm font-medium text-slate-700 sm:max-w-none">
-        <span class="rounded-full border border-white/15 bg-white px-4 py-2 shadow-subtle">No sign-up required</span>
-        <span class="rounded-full border border-white/15 bg-white px-4 py-2 shadow-subtle">Local browser processing</span>
-        <span class="rounded-full border border-white/15 bg-white px-4 py-2 shadow-subtle">Copy-ready formatting</span>
+        <span class="rounded-full border border-[#F8D49B]/40 bg-white px-4 py-2 shadow-subtle">No sign-up required</span>
+        <span class="rounded-full border border-[#F8D49B]/40 bg-white px-4 py-2 shadow-subtle">Local browser processing</span>
+        <span class="rounded-full border border-[#F8D49B]/40 bg-white px-4 py-2 shadow-subtle">Copy-ready formatting</span>
       </div>
 
       <FormatToolbar
@@ -27,7 +27,7 @@
       <UnicodeTextConverter class="mt-3" />
     </div>
 
-    <aside class="min-w-0 rounded-2xl border border-white/70 bg-[#FFFDF8] p-5 shadow-soft" aria-label="Workspace preview and stats">
+    <aside class="min-w-0 rounded-2xl border border-white/70 bg-[#FFFDF8] p-5 shadow-subtle" aria-label="Workspace preview and stats">
       <div class="flex flex-wrap items-center justify-between gap-3 border-b border-soft pb-4">
         <div class="min-w-0">
           <p class="text-sm font-semibold text-ink">Preview workspace</p>

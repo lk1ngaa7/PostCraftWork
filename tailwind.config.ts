@@ -4,11 +4,13 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       colors: {
-        page: '#F6F8FB',
+        page: '#F8F5EF',
         surface: '#FFFFFF',
         ink: '#0F172A',
         muted: '#64748B',
-        navy: '#0B1220',
+        navy: '#101522',
+        craft: '#D6A04A',
+        craftSoft: '#FFF3DA',
         professional: '#0A66C2',
         action: '#2563EB',
         border: '#E2E8F0',

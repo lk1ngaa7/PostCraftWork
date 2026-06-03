@@ -2,7 +2,7 @@
   <section class="rounded-2xl border border-[#D6E6F7] bg-[#FFFDF8] p-4 text-ink shadow-soft sm:p-5">
     <div class="flex flex-wrap items-center justify-between gap-3">
       <div>
-        <p class="mb-2 inline-flex rounded-full bg-[#EAF3FF] px-3 py-1 text-xs font-semibold text-professional">
+        <p class="mb-2 inline-flex rounded-full bg-craftSoft px-3 py-1 text-xs font-semibold text-[#8B5E12]">
           Compose
         </p>
         <label for="post-editor" class="block text-base font-bold text-ink">Your post</label>
