@@ -1,10 +1,6 @@
 <template>
   <main>
-    <PostWorkspace
-      mode="bold"
-      title="How to Bold Text in a LinkedIn Post"
-      subtitle="Convert short phrases into Unicode bold, italic, or bold italic text you can copy into a LinkedIn post."
-    />
+    <ToolsUnicodeBoldTool />
     <SeoContent
       heading="How bold text works in LinkedIn posts"
       intro="LinkedIn posts do not provide native rich text controls for regular post copy, so this tool uses Unicode characters for short emphasis."

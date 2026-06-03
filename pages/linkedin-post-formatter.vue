@@ -1,10 +1,6 @@
 <template>
   <main>
-    <PostWorkspace
-      mode="format"
-      title="LinkedIn Post Formatter"
-      subtitle="Clean up spacing, paragraphs, bullets, and line breaks before you publish on LinkedIn."
-    />
+    <ToolsFormatterTool />
     <SeoContent
       heading="How to format a LinkedIn post"
       intro="Use the formatter to clean spacing and line breaks while keeping your original wording intact."

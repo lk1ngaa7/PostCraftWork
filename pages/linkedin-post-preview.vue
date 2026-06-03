@@ -1,10 +1,6 @@
 <template>
   <main>
-    <PostWorkspace
-      mode="preview"
-      title="LinkedIn Post Preview"
-      subtitle="See how your LinkedIn post may look in a professional feed-style preview before you publish."
-    />
+    <ToolsPreviewTool />
     <SeoContent
       heading="Why preview a LinkedIn post?"
       intro="Previewing helps you check the first-screen reading experience, paragraph rhythm, and whether the post feels easy to scan."

@@ -1,10 +1,6 @@
 <template>
   <main>
-    <PostWorkspace
-      mode="inspector"
-      title="LinkedIn Post Inspector"
-      subtitle="Check your LinkedIn post structure for hook length, paragraph spacing, CTA, hashtags, links, and readability."
-    />
+    <ToolsInspectorTool />
     <SeoContent
       heading="Inspect structure before publishing"
       intro="The inspector checks structural signals that affect readability. It does not pretend to score creativity or topic quality."

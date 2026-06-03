@@ -1,10 +1,6 @@
 <template>
   <main>
-    <PostWorkspace
-      mode="stats"
-      title="LinkedIn Post Character Limit Checker"
-      subtitle="Count characters, words, hashtags, links, and paragraphs in your LinkedIn post."
-    />
+    <ToolsCharacterLimitTool />
     <SeoContent
       heading="Check your current post length"
       intro="Use live counts to understand the shape of your draft without relying on outdated assumptions about platform limits."
