@@ -1,6 +1,7 @@
 .nuxt
 .output
 .omx
+.wrangler
 dist
 artifacts
 node_modules
