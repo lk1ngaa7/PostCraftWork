@@ -11,6 +11,13 @@ export default defineNuxtConfig({
           content:
             'Format, preview, inspect, and polish your LinkedIn posts before publishing. Free browser-based LinkedIn post tools with no sign-up required.'
         }
+      ],
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/svg+xml',
+          href: '/favicon.svg'
+        }
       ]
     }
   },
