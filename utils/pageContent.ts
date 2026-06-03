@@ -4,27 +4,27 @@ import type { RelatedTool } from '~/components/post/RelatedTools.vue'
 export const allRelatedTools: RelatedTool[] = [
   {
     title: 'LinkedIn Post Formatter',
-    description: 'Clean spacing, paragraph breaks, and copy-ready post formatting.',
+    description: 'Clean spacing, line breaks, bullets, and duplicate formatting before copying a draft.',
     to: '/linkedin-post-formatter'
   },
   {
     title: 'LinkedIn Post Preview',
-    description: 'Check how a post reads in a professional feed-style preview.',
+    description: 'Review the first screen, see-more behavior, media, and link card approximation.',
     to: '/linkedin-post-preview'
   },
   {
     title: 'Character Limit Checker',
-    description: 'Count characters, words, hashtags, links, emojis, and reading time.',
+    description: 'Compare post, profile, article, and ad copy against configurable character limits.',
     to: '/linkedin-post-character-limit'
   },
   {
     title: 'Bold Text Converter',
-    description: 'Convert short phrases into Unicode bold, italic, or bold italic text.',
+    description: 'Create copy-ready Unicode bold, italic, sans, and monospace emphasis for short phrases.',
     to: '/how-to-bold-text-in-linkedin-post'
   },
   {
     title: 'Post Inspector',
-    description: 'Review hook length, spacing, CTA, hashtags, links, and readability.',
+    description: 'Check hook length, paragraph density, CTA, hashtag use, link placement, and readability.',
     to: '/linkedin-post-inspector'
   }
 ]
@@ -35,8 +35,8 @@ export function relatedToolsFor(path: string) {
 
 export const defaultFaq: FaqItem[] = [
   {
-    question: 'Does this tool upload my LinkedIn post?',
-    answer: 'No. The editor, preview, stats, formatting, and inspector run in your browser without asking for a LinkedIn account.'
+    question: 'Is my post uploaded to a server?',
+    answer: 'No. The core editor, formatter, preview, stats, Unicode converter, and inspector run in your browser. The preview page can optionally fetch public link metadata when you ask it to fetch an OG preview.'
   },
   {
     question: 'Is PostCraft.work affiliated with LinkedIn?',

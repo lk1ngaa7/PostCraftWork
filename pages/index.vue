@@ -5,8 +5,8 @@
         <div class="min-w-0 self-center">
           <p class="text-sm font-semibold text-[#F8D49B]">Browser-based LinkedIn writing tools</p>
           <h1 class="mt-4 max-w-3xl text-balance text-[2.35rem] font-bold leading-[1.05] sm:text-5xl lg:text-6xl">
-            <span class="block sm:inline">Free LinkedIn</span>
-            <span class="block sm:inline">Post Tools</span>
+            <span class="block">Free LinkedIn</span>
+            <span class="block">Post Tools</span>
           </h1>
           <p class="mt-5 max-w-2xl text-pretty text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
             Format, preview, inspect, and polish your LinkedIn posts before publishing.
@@ -130,6 +130,8 @@
       heading="Why use PostCraft before publishing?"
       intro="PostCraft.work gives LinkedIn creators a calm browser workspace for the checks that usually happen right before a post goes live."
       :sections="sections"
+      :how-to-steps="howToSteps"
+      :tips="tips"
       :faq="faq"
       :related-tools="relatedTools"
     />
@@ -141,7 +143,7 @@ import { allRelatedTools, defaultFaq } from '~/utils/pageContent'
 
 useSeoMetaConfig({
   title: 'PostCraft.work - Free LinkedIn Post Tools',
-  description: 'Format, preview, inspect, and polish your LinkedIn posts before publishing. Free browser-based LinkedIn post tools with no sign-up required.',
+  description: 'Format, preview, inspect, and polish your LinkedIn posts before publishing. Free professional LinkedIn post tools with no sign-up required.',
   path: '/'
 })
 
@@ -223,9 +225,28 @@ function cleanQuickPost() {
 const sections = [
   { title: 'One hub, five workflows', body: 'Use the home page for quick cleanup, then move into the dedicated formatter, preview, limit checker, Unicode converter, or inspector when you need a deeper pass.' },
   { title: 'Built for publishing checks', body: 'The tools focus on spacing, first-screen readability, post length, links, hashtags, emojis, and copy-ready output instead of generic content generation.' },
-  { title: 'Private by default', body: 'Your post text is processed in the browser. The site does not ask for LinkedIn credentials and does not publish on your behalf.' }
+  { title: 'Independent and local-first', body: 'PostCraft.work does not ask for LinkedIn credentials, does not publish on your behalf, and keeps the core text workflow in your browser.' }
 ]
 
-const faq = defaultFaq
+const howToSteps = [
+  { title: 'Start with a quick cleanup', body: 'Paste a draft into the home workspace to clean spacing and check basic post stats.' },
+  { title: 'Open the focused tool', body: 'Choose Formatter, Preview, Character Limit, Bold Text, or Inspector when you need a deeper workflow.' },
+  { title: 'Review before copying', body: 'Use the dedicated page results to adjust spacing, first-screen readability, length, Unicode emphasis, or publishing readiness.' },
+  { title: 'Publish from your own account', body: 'Copy the prepared text and paste it into LinkedIn yourself. PostCraft.work does not post directly.' }
+]
+
+const tips = [
+  'Use Formatter first when the draft came from another editor and spacing looks uneven.',
+  'Use Preview before publishing longer posts where the see-more point matters.',
+  'Use Character Limit for post, profile, article, or ad fields that need a hard count.',
+  'Use Inspector last when you want a structural checklist before copying the final draft.'
+]
+
+const faq = [
+  { question: 'What is PostCraft.work for?', answer: 'PostCraft.work is a browser-based set of LinkedIn post tools for formatting, previewing, checking length, converting Unicode emphasis, and inspecting readability before publishing.' },
+  { question: 'Do I need an account?', answer: 'No. The tools are free to use without sign-up and do not require LinkedIn credentials.' },
+  { question: 'Which tool should I use first?', answer: 'If your draft is messy, start with the formatter. If the opening is your main concern, use the preview or inspector.' },
+  ...defaultFaq
+]
 const relatedTools = allRelatedTools
 </script>
